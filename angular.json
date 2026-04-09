@@ -69,7 +69,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "/solare-landing-demo/"
+            "baseHref": "/acme-landing-demo/"
           }
         }
       }
