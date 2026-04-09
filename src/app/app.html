@@ -1,7 +1,7 @@
 <!-- Navbar -->
-<nav class="fixed top-0 left-0 w-full z-50 glass px-6 py-4 flex justify-between items-center transition-all duration-300">
-  <div class="text-solare-gold text-2xl font-bold tracking-wider uppercase cursor-pointer" (click)="scrollTo('home')">
-    Solare Produções
+<nav class="fixed top-0 left-0 w-full z-50 glass px-6 py-4 flex justify-between items-center transition-all duration-300 border-b border-solare-gold/20">
+  <div class="cursor-pointer flex items-center" (click)="scrollTo('home')">
+    <img src="solare_logo_hq.png" alt="Solare Produções" class="h-14 w-auto object-contain drop-shadow-[0_0_8px_rgba(212,175,55,0.4)] hover:scale-105 transition-transform duration-300" />
   </div>
   <ul class="hidden md:flex space-x-8 text-sm font-medium tracking-wide">
     <li class="hover:text-solare-gold cursor-pointer" (click)="scrollTo('home')">Home</li>
@@ -9,7 +9,7 @@
     <li class="hover:text-solare-gold cursor-pointer" (click)="scrollTo('mission')">Missão</li>
     <li class="hover:text-solare-gold cursor-pointer" (click)="scrollTo('contact')">Contato</li>
   </ul>
-  <p-button label="Orçamento" icon="pi pi-envelope" (click)="scrollTo('contact')" [text]="true" [raised]="true" class="hidden md:block !text-solare-gold"></p-button>
+  <p-button label="Orçamento" icon="pi pi-envelope" (click)="scrollTo('contact')" [text]="true" [raised]="true" class="hidden md:block !text-solare-gold !rounded-full"></p-button>
 </nav>
 
 <!-- Hero Section -->
@@ -19,14 +19,19 @@
     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#000000]/60 to-[#000000]"></div>
   </div>
   <div class="relative z-10 text-center px-4 max-w-4xl flex flex-col items-center">
-    <h1 class="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-solare-gold to-yellow-200 mb-6 drop-shadow-lg">
+    <div class="w-32 h-32 md:w-48 md:h-48 rounded-full border border-solare-gold/40 flex items-center justify-center mb-8 p-2">
+      <div class="w-full h-full rounded-full border-2 border-solare-gold flex items-center justify-center bg-black/40 backdrop-blur-sm">
+        <span class="text-solare-gold font-serif text-4xl md:text-6xl font-bold">S</span>
+      </div>
+    </div>
+    <h1 class="font-serif text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-solare-gold to-yellow-200 mb-6 drop-shadow-lg leading-tight uppercase tracking-wide">
       A Arte Elevada à Perfeição.
     </h1>
-    <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl font-light">
+    <p class="text-lg md:text-2xl text-gray-300 mb-10 max-w-2xl font-light">
       Solare Produções é o seu estúdio premium. Onde excelência, inspiração e engenharia de áudio convergem para extrair a melhor versão da sua música.
     </p>
-    <p-button label="Inicie Seu Projeto" size="large" icon="pi pi-arrow-right" iconPos="right" (onClick)="scrollTo('contact')" 
-              styleClass="!bg-solare-gold !border-solare-gold !text-black font-bold hover:!bg-yellow-500 hover:!border-yellow-500 shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all">
+    <p-button label="Inicie Seu Projeto" size="large" icon="pi pi-arrow-right" iconPos="right" (onClick)="scrollTo('contact')"
+              styleClass="!bg-solare-gold !border-solare-gold !text-black font-bold hover:!bg-yellow-500 hover:!border-yellow-500 shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all !rounded-full !px-8">
     </p-button>
   </div>
 </header>
@@ -39,8 +44,11 @@
       <img src="solare_about.png" alt="Sobre nós" class="relative rounded-lg shadow-2xl object-cover h-[500px] w-full" />
     </div>
     <div>
-      <h2 class="text-solare-gold text-sm font-bold tracking-[0.2em] uppercase mb-3">Conheça a Produtora</h2>
-      <h3 class="text-4xl md:text-5xl font-bold mb-8">Nossa essência é a música.</h3>
+      <h2 class="font-serif text-solare-gold text-sm font-bold tracking-[0.2em] uppercase mb-3 flex items-center gap-4">
+        <span class="w-12 h-[1px] bg-solare-gold"></span>
+        Conheça a Produtora
+      </h2>
+      <h3 class="font-serif text-4xl md:text-5xl font-bold mb-8">Nossa essência é a música.</h3>
       <div class="space-y-6 text-gray-400 leading-relaxed font-light">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra, leo ac suscipit condimentum, lorem felis vehicula diam, in rhoncus tortor erat aliquet dolor. Maecenas scelerisque magna ac ipsum convallis, vel interdum nulla tempor.
@@ -60,21 +68,27 @@
 <section id="mission" class="py-24 px-6 md:px-16 relative bg-[#050505]">
   <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-solare-gold/5 via-[#050505] to-[#000000]"></div>
   <div class="relative z-10 max-w-7xl mx-auto">
-    <div class="text-center mb-16">
-      <h2 class="text-solare-gold text-sm font-bold tracking-[0.2em] uppercase mb-3">Visão e Valores</h2>
-      <h3 class="text-4xl md:text-5xl font-bold">Nossa Missão</h3>
+    <div class="text-center mb-16 flex flex-col items-center">
+      <h2 class="font-serif text-solare-gold text-sm font-bold tracking-[0.2em] uppercase mb-3 flex items-center justify-center gap-4">
+        <span class="w-12 h-[1px] bg-solare-gold"></span>
+        Visão e Valores
+        <span class="w-12 h-[1px] bg-solare-gold"></span>
+      </h2>
+      <h3 class="font-serif text-4xl md:text-5xl font-bold">Nossa Missão</h3>
     </div>
-    
+
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <div *ngFor="let card of missionCards" class="h-full">
         <p-card styleClass="h-full !bg-[#0f0f0f] !border !border-solare-gold/20 hover:!border-solare-gold/60 transition-colors duration-300">
           <ng-template pTemplate="header">
             <div class="pt-8 px-6 flex justify-center">
-              <i class="pi {{ card.icon }} text-5xl text-solare-gold drop-shadow-[0_0_10px_rgba(212,175,55,0.5)]"></i>
+              <div class="w-20 h-20 rounded-full border border-solare-gold/30 flex items-center justify-center bg-[#151515]">
+                <i class="pi {{ card.icon }} text-4xl text-solare-gold drop-shadow-[0_0_10px_rgba(212,175,55,0.5)]"></i>
+              </div>
             </div>
           </ng-template>
           <div class="text-center">
-            <h4 class="text-2xl font-bold text-white mb-4">{{ card.title }}</h4>
+            <h4 class="font-serif text-2xl font-bold text-white mb-4">{{ card.title }}</h4>
             <p class="text-gray-400 font-light leading-relaxed">
               {{ card.content }}
             </p>
@@ -88,9 +102,13 @@
 <!-- Contato -->
 <section id="contact" class="py-24 px-6 md:px-16 bg-[#000000] border-t border-solare-gold/10">
   <div class="max-w-4xl mx-auto">
-    <div class="text-center mb-16">
-      <h2 class="text-solare-gold text-sm font-bold tracking-[0.2em] uppercase mb-3">Fale Conosco</h2>
-      <h3 class="text-4xl md:text-5xl font-bold">Inicie seu Próximo Sucesso</h3>
+    <div class="text-center mb-16 flex flex-col items-center">
+      <h2 class="font-serif text-solare-gold text-sm font-bold tracking-[0.2em] uppercase mb-3 flex items-center justify-center gap-4">
+        <span class="w-12 h-[1px] bg-solare-gold"></span>
+        Fale Conosco
+        <span class="w-12 h-[1px] bg-solare-gold"></span>
+      </h2>
+      <h3 class="font-serif text-4xl md:text-5xl font-bold">Inicie seu Próximo Sucesso</h3>
     </div>
 
     <div class="bg-[#0f0f0f] border border-solare-gold/20 p-8 md:p-12 rounded-xl shadow-[0_0_30px_rgba(212,175,55,0.05)]">
@@ -113,8 +131,8 @@
         <textarea pTextarea id="message" rows="5" class="!bg-[#151515] !border-solare-gold/30 focus:!border-solare-gold text-white"></textarea>
       </div>
       <div class="flex justify-center">
-        <p-button label="Enviar Mensagem" icon="pi pi-send" 
-                  styleClass="!bg-solare-gold !border-solare-gold !text-black font-bold hover:!bg-yellow-500 hover:!border-yellow-500 px-10 py-3 text-lg">
+        <p-button label="Enviar Mensagem" icon="pi pi-send"
+                  styleClass="!bg-solare-gold !border-solare-gold !text-black font-bold hover:!bg-yellow-500 hover:!border-yellow-500 px-10 py-3 text-lg !rounded-full">
         </p-button>
       </div>
     </div>
@@ -124,8 +142,8 @@
 <!-- Footer -->
 <footer class="border-t border-solare-gold/20 py-12 bg-[#050505]">
   <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left">
-    <div>
-      <h4 class="text-solare-gold font-bold text-xl tracking-wider uppercase mb-2">Solare Produções</h4>
+    <div class="flex flex-col items-center md:items-start">
+      <img src="solare_logo_hq.png" alt="Solare Produções" class="h-20 w-auto object-contain drop-shadow-[0_0_10px_rgba(212,175,55,0.4)] mb-4" />
       <p class="text-sm text-gray-500">© 2026 Solare Produções. Todos os direitos reservados.</p>
     </div>
     <div class="flex justify-center space-x-6 text-2xl">
