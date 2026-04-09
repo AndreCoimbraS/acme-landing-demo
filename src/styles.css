@@ -1,0 +1,52 @@
+@import 'primeicons/primeicons.css';
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@layer tailwind-base, primeng, tailwind-utilities;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Playfair Display', serif;
+  scroll-behavior: smooth;
+}
+
+/* Custom Primary Color for Aura Theme */
+:root {
+  --p-primary-50: #FCF9EC;
+  --p-primary-100: #F7EFC8;
+  --p-primary-200: #F1E29F;
+  --p-primary-300: #EAD271;
+  --p-primary-400: #E4C048;
+  --p-primary-500: #D4AF37; /* solare-gold */
+  --p-primary-600: #C29D29;
+  --p-primary-700: #A2811A;
+  --p-primary-800: #886C16;
+  --p-primary-900: #6D5613;
+  --p-primary-950: #423207;
+}
+
+/* Smooth transitions for links, buttons */
+a, button {
+  transition: all 0.3s ease;
+}
+
+/* Glass effect utilities */
+.glass {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
