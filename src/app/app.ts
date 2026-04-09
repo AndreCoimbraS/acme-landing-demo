@@ -8,7 +8,7 @@ import { CardModule } from 'primeng/card';
 @Component({
   selector: 'app-root',
   imports: [CommonModule, ButtonModule, InputTextModule, TextareaModule, CardModule],
-  templateUrl: './app.html'
+  templateUrl: './app.component.html'
 })
 export class App {
   title = 'solare-landing';
